@@ -14,6 +14,6 @@
     "@formzillion/eslint-config": "workspace:*",
     "@formzillion/typescript-config": "workspace:*",
     "react": "^18.2.0",
-    "typescript": "^4.5.2"
+    "typescript": "^5.4.5"
   }
 }
