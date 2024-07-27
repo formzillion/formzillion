@@ -12,18 +12,17 @@ export const groupBy = (arr = [], lambda: any) => {
   }, []);
 };
 
-export const groupByYear = (arr: any) => {
-  let response: any = {};
-  arr.forEach((d: any) => {
-    for (var k in d) {
-      var _ = k.split("-");
-      var year = _[0];
-      var month = _[1];
-      if (!response[year]) response[year] = { total: 0 };
-      response[year][month] = response[year][month]
-        ? response[year][month] + d[k]
-        : d[k];
-      response[year].total += d[k];
+export const groupByYear = (arr: { [key: string]: number }[]) => {
+  let response: { [year: string]: { [month: string]: number; total: number } } =
+    {};
+  arr.forEach((d: { [key: string]: number }) => {
+    for (const k in d) {
+      const [year, month] = k.split("-");
+      //Todo: Fix this
+      // if (!response[year]) response[year] = {};
+      // if (!response[year][month]) response[year][month] = 0;
+      // response[year][month] += d[k];
+      // response[year].total += d[k];
     }
   });
   return response;

@@ -30,7 +30,8 @@ export default function Popper() {
       <Popover.Anchor />
       <Popover.Portal>
         <Popover.Content
-          className="rounded p-5 w-[260px] flex bg-gray-700 text-gray-200 shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] focus:shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2),0_0_0_2px_theme(colors.violet7)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
+          // className="rounded p-5 w-[260px] flex bg-gray-700 text-gray-200 shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2)] focus:shadow-[0_10px_38px_-10px_hsla(206,22%,7%,.35),0_10px_20px_-15px_hsla(206,22%,7%,.2),0_0_0_2px_theme(colors.violet7)] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
+          className="rounded p-5 w-[260px] flex bg-gray-700 text-gray-200"
           sideOffset={5}
         >
           <div className="space-y-6 ">
@@ -53,7 +54,7 @@ export default function Popper() {
               className="flex w-full cursor-pointer items-center text-gray-200"
               onClick={() => setShowModal(true)}
             >
-              <PlusCircleIcon className="w-8 mr-2 text-blue-600"/>
+              <PlusCircleIcon className="w-8 mr-2 text-blue-600" />
               Create Team
             </div>
             {showModal && (

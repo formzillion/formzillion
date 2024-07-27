@@ -1,4 +1,4 @@
-import { PrismaClient } from "database";
+import { PrismaClient } from "@formzillion/database";
 
 let prisma: PrismaClient;
 

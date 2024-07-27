@@ -1,5 +1,5 @@
 {
-  "extends": "@formzillion/tsconfig/node16.json",
+  "extends": "@formzillion/typescript-config/base.json",
   "compilerOptions": {
     "rootDir": "lib",
     "outDir": "dist",

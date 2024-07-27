@@ -2,37 +2,23 @@
   "name": "formzillion",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.9",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@7.21.0",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "scripts": {
-    "predev": "rm -rf apps/webapp/.next && rm -rf apps/docs/.next && rm -rf apps/website/.next",
-    "prebuild": "rm -rf apps/webapp/.next && rm -rf apps/docs/.next && rm -rf apps/website/.next",
-    "build": "dotenv -- turbo run build",
-    "dev": "dotenv -- turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset:add": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:release": "pnpm run build && changeset publish",
-    "changeset:next": "changeset pre enter next",
-    "changeset:normal": "changeset pre exit"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.26.1",
-    "dotenv": "^16.0.3"
-  },
-  "devDependencies": {
-    "dotenv-cli": "^7.2.1",
-    "eslint-config-custom": "workspace:0.0.0",
-    "prettier": "latest",
-    "@deploysentinel/playwright": "^0.3.3",
-    "@playwright/test": "^1.34.3",
-    "turbo": "^1.9.3"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "packageManager": "pnpm@7.17.0"
+  ]
 }

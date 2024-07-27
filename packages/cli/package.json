@@ -31,10 +31,10 @@
     "commander": "^10.0.1"
   },
   "devDependencies": {
-    "@formzillion/tsconfig": "workspace:*",
+    "@formzillion/typescript-config": "workspace:*",
     "@types/commander": "^2.12.2",
     "@types/node": "^20.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=16.7"

@@ -28,6 +28,7 @@ export default async function handler(
     password,
   });
   if (error) {
+    console.log("Error during login", error);
     return res.status(500).json({ error: error });
   }
   try {
@@ -41,7 +42,7 @@ export default async function handler(
         `*User logged In*\n
             Email ID: ${email}\n`
       );
-      
+
       return res
         .status(200)
         .json({ url: teamSlug, avatar, planName, userDetail });

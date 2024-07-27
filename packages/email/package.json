@@ -28,5 +28,8 @@
     "@react-email/section": "^0.0.8",
     "@react-email/text": "^0.0.4",
     "react-email": "^1.7.15"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.0"
   }
 }

@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formzillion/database": "workspace:*",
     "@botpoison/node": "^0.1.10",
     "@codemirror/lang-javascript": "^6.1.4",
     "@codemirror/lang-json": "^6.0.1",
@@ -21,7 +22,6 @@
     "@headlessui/tailwindcss": "^0.1.2",
     "@heroicons/react": "^2.0.16",
     "@hookform/resolvers": "^2.9.11",
-    "@next/font": "^13.1.3",
     "@ngneat/falso": "^6.4.0",
     "@prisma/client": "^4.11.0",
     "@radix-ui/react-avatar": "^1.0.2",
@@ -50,7 +50,6 @@
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
-    "database": "workspace:*",
     "date-fns": "^2.29.3",
     "encoding": "^0.1.13",
     "framer-motion": "^10.2.4",
@@ -61,8 +60,8 @@
     "micro": "^10.0.1",
     "micro-cors": "^0.1.1",
     "nanoid": "^4.0.2",
-    "next": "13.2.0",
-    "next-themes": "^0.2.1",
+    "next": "^14.2.3",
+    "next-themes": "^0.3.0",
     "nextjs-cors": "^2.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -76,7 +75,7 @@
     "swiper": "^9.2.0",
     "tailwind-merge": "^1.12.0",
     "tailwind-scrollbar": "^3.0.0",
-    "typescript": "^4.9.5",
+    "typescript": "^5.4.5",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
@@ -91,12 +90,12 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.14",
-    "eslint-config-custom": "workspace:*",
+    "@formzillion/eslint-config": "workspace:*",
     "postcss": "^8.4.21",
     "prettier": "2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",
-    "prisma": "^4.11.0",
-    "tailwindcss": "^3.2.7",
+    "prisma": "^5.13.0",
+    "tailwindcss": "^3.4.4",
     "@deploysentinel/playwright": "^0.3.3",
     "@playwright/test": "^1.34.3"
   }

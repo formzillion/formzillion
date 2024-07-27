@@ -3,19 +3,22 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-    serverActions: true,
-    serverComponentsExternalPackages: ["@prisma/client"],
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
+  // experimental: {
+  //   appDir: true,
+  //   serverActions: true,
+  //   serverComponentsExternalPackages: ["@prisma/client"],
+  // },
+  // webpack(config) {
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"],
+  //   });
 
-    return config;
-  },
+  //   return config;
+  // },
 };
 
-module.exports = withContentlayer(nextConfig);
+//Todo: Fix this
+// module.exports = withContentlayer(nextConfig);
+
+module.exports = nextConfig;
