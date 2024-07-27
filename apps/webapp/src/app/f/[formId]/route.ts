@@ -113,30 +113,30 @@ export async function POST(
     }
 
     // Send form data to webhooks if not local environment
-    try {
-      const queueData = {
-        eventName: "formSubmission",
-        eventData: {
-          formId,
-          formSubmissionData: formSubmission,
-          formData,
-        },
-      };
-      if (["development", "production"].includes(process.env.NODE_ENV)) {
-        fetch(`${process.env.WB_WEBHOOK_URL}/formzillion/events`, {
-          cache: "no-cache",
-          method: "POST",
-          body: JSON.stringify(queueData),
-        });
-      } else {
-        await fzProducer(queueData);
-      }
-    } catch (e: any) {
-      console.log(
-        "Error occured for pushing the form submission data to fz_action Queue",
-        e.message
-      );
-    }
+    // try {
+    //   const queueData = {
+    //     eventName: "formSubmission",
+    //     eventData: {
+    //       formId,
+    //       formSubmissionData: formSubmission,
+    //       formData,
+    //     },
+    //   };
+    //   if (["development", "production"].includes(process.env.NODE_ENV)) {
+    //     fetch(`${process.env.WB_WEBHOOK_URL}/formzillion/events`, {
+    //       cache: "no-cache",
+    //       method: "POST",
+    //       body: JSON.stringify(queueData),
+    //     });
+    //   } else {
+    //     await fzProducer(queueData);
+    //   }
+    // } catch (e: any) {
+    //   console.log(
+    //     "Error occured for pushing the form submission data to fz_action Queue",
+    //     e.message
+    //   );
+    // }
 
     try {
       if (isEmpty(redirectURL)) {
