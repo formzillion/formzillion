@@ -1,0 +1,32 @@
+{
+  "name": "@formzillion/database",
+  "version": "0.0.0",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "engines": {
+    "node": "20"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate"
+  },
+  "dependencies": {
+    "@prisma/client": "latest",
+    "zod": "^3.23.8",
+    "zod-prisma": "^0.5.4"
+  },
+  "devDependencies": {
+    "prisma": "latest",
+    "typescript": "^5.4.5"
+  }
+}
