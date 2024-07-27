@@ -10,22 +10,22 @@ const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["ui"],
   swcMinify: true,
-  experimental: {
-    appDir: true,
-    serverComponentsExternalPackages: ["@prisma/client", "@tremor/react"],
-  },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.plugins = [...config.plugins, new PrismaPlugin()];
-    }
+  // experimental: {
+  //   appDir: true,
+  //   //serverComponentsExternalPackages: ["@prisma/client", "@tremor/react"],
+  // },
+  // webpack: (config, { isServer }) => {
+  //   if (isServer) {
+  //     config.plugins = [...config.plugins, new PrismaPlugin()];
+  //   }
 
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"],
+  //   });
 
-    return config;
-  },
+  //   return config;
+  // },
   async headers() {
     return [
       {
