@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs.formzillion.com
+
+# Sitemaps
+Sitemap: https://docs.formzillion.com/sitemap.xml
